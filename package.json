@@ -1,0 +1,23 @@
+{
+  "name": "watermelon",
+  "version": "0.0.0-development",
+  "description": "Decentraland UI",
+  "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "jest",
+    "start": "npm start -w @dcl/watermelon-docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/decentraland/watermelon.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/decentraland/watermelon/issues"
+  },
+  "homepage": "https://github.com/decentraland/watermelon#readme"
+}

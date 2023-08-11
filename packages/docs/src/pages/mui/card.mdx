@@ -1,0 +1,54 @@
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import { ThemeProvider, Grid } from "@mui/material";
+import { neutral, rarityGradient } from "@dcl/watermelon-types/src/colors";
+import { dark, light } from "@dcl/watermelon-mui/src/theme";
+
+export function Example() {
+  return <Card sx={{ maxWidth: 260 }}>
+        <CardMedia
+          title="green iguana"
+          style={{
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            backgroundImage: [
+              `url("https://peer.decentraland.org/lambdas/collections/contents/urn:decentraland:ethereum:collections-v1:xmash_up_2020:xmash_up_coat_upper_body/thumbnail")`,
+              rarityGradient.unique,
+            ].join(","),
+            backgroundSize: "contain",
+          }}
+        >
+          <svg width="1" height="1" style={{ width: '100%', height: 'auto' }} />
+        </CardMedia>
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            Lizard
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Lizards are a widespread group of squamate reptiles, with over 6,000
+            species, ranging across all continents except Antarctica
+          </Typography>
+        </CardContent>
+        <CardActions>
+          <Button size="small">Share</Button>
+          <Button size="small">Learn More</Button>
+        </CardActions>
+      </Card>
+}
+
+<Grid container>
+  <Grid item xs={6} style={{ background: neutral.softWhite, padding: "5rem", justifyContent: "center" }}>
+    <ThemeProvider theme={light}>
+      <Example />
+    </ThemeProvider>
+  </Grid>
+  <Grid item xs={6} style={{ background: neutral.softBlack2, padding: "5rem", justifyContent: "center"  }}>
+    <ThemeProvider theme={dark}>
+      <Example />
+    </ThemeProvider>
+  </Grid>
+</Grid>

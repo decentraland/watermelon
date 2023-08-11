@@ -1,0 +1,24 @@
+import {ConfigProvider, Space, Typography} from "antd"
+import {neutral} from "@dcl/watermelon-types/src/colors"
+import { dark, light } from "@dcl/watermelon-antd/src/theme"
+
+<Space>
+  <ConfigProvider theme={{ algorithm: light }}>
+    <div style={{background: neutral.softWhite, padding: '5rem' }}>
+      <Typography.Title>h1. Title</Typography.Title>
+      <Typography.Title level={2}>h2. Title</Typography.Title>
+      <Typography.Title level={3}>h3. Title</Typography.Title>
+      <Typography.Title level={4}>h4. Title</Typography.Title>
+      <Typography.Title level={5}>h5. Title</Typography.Title>
+    </div>
+  </ConfigProvider>
+  <ConfigProvider theme={{ algorithm: dark }}>
+    <div style={{background: neutral.softBlack1, padding: '5rem' }}>
+      <Typography.Title>h1. Title</Typography.Title>
+      <Typography.Title level={2}>h2. Title</Typography.Title>
+      <Typography.Title level={3}>h3. Title</Typography.Title>
+      <Typography.Title level={4}>h4. Title</Typography.Title>
+      <Typography.Title level={5}>h5. Title</Typography.Title>
+    </div>
+  </ConfigProvider>
+</Space>

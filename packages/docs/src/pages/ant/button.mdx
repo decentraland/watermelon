@@ -1,0 +1,59 @@
+import {
+  ConfigProvider,
+  Space,
+  Typography,
+} from "antd";
+import { neutral } from "@dcl/watermelon-types/src/colors";
+import Button from "@dcl/watermelon-antd/src/components/Button";
+import * as ant from "@dcl/watermelon-antd/src/theme";
+
+<Space>
+  <ConfigProvider theme={{ algorithm: ant.light }}>
+    <div style={{ background: neutral.softWhite, padding: "5rem" }}>
+      <Typography.Title>Button</Typography.Title>
+      <Space wrap>
+        <Button type="primary">primary</Button>
+        <Button type="default">default</Button>
+        <Button type="dashed">dashed</Button>
+        <Button type="text">text</Button>
+        <Button type="link">link</Button>
+      </Space>
+      <Typography.Title level={2}>Size</Typography.Title>
+      <Space wrap>
+        <Button type="primary" size="large">large</Button>
+        <Button type="primary" size="default">default</Button>
+        <Button type="primary" size="small">small</Button>
+        <Button type="default" size="large">large</Button>
+        <Button type="default" size="default">default</Button>
+        <Button type="default" size="small">small</Button>
+        <Button type="text" size="large">large</Button>
+        <Button type="text" size="default">default</Button>
+        <Button type="text" size="small">small</Button>
+      </Space>
+    </div>
+  </ConfigProvider>
+  <ConfigProvider theme={{ algorithm: ant.dark }}>
+    <div style={{ background: neutral.softBlack1, padding: "5rem" }}>
+      <Typography.Title>Button</Typography.Title>
+      <Space wrap>
+        <Button type="primary">primary</Button>
+        <Button type="default">default</Button>
+        <Button type="dashed">dashed</Button>
+        <Button type="text">text</Button>
+        <Button type="link">link</Button>
+      </Space>
+      <Typography.Title level={2}>Size</Typography.Title>
+      <Space wrap>
+        <Button type="primary" size="large">large</Button>
+        <Button type="primary" size="default">default</Button>
+        <Button type="primary" size="small">small</Button>
+        <Button type="default" size="large">large</Button>
+        <Button type="default" size="default">default</Button>
+        <Button type="default" size="small">small</Button>
+        <Button type="text" size="large">large</Button>
+        <Button type="text" size="default">default</Button>
+        <Button type="text" size="small">small</Button>
+      </Space>
+    </div>
+  </ConfigProvider>
+</Space>

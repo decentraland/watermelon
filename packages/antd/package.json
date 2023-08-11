@@ -1,0 +1,26 @@
+{
+  "name": "@dcl/watermelon-antd",
+  "version": "0.0.0-development",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/decentraland/watermelon.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/decentraland/watermelon/issues"
+  },
+  "homepage": "https://github.com/decentraland/watermelon#readme",
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
+  },
+  "dependencies": {
+    "antd": "^5.8.2"
+  }
+}

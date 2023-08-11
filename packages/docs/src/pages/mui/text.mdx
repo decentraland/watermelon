@@ -1,0 +1,26 @@
+import { ThemeProvider, Typography, Grid } from "@mui/material";
+import { neutral } from "@dcl/watermelon-types/src/colors";
+import { dark, light } from "@dcl/watermelon-mui/src/theme";
+
+export function Example() {
+  return <>
+      <Typography variant="h1">h1. Title</Typography>
+      <Typography variant="h2">h2. Title</Typography>
+      <Typography variant="h3">h3. Title</Typography>
+      <Typography variant="h4">h4. Title</Typography>
+      <Typography variant="h5">h5. Title</Typography>
+      </>
+}
+
+<Grid container>
+  <Grid item xs={6} style={{ background: neutral.softWhite, padding: "5rem" }}>
+    <ThemeProvider theme={light}>
+      <Example />
+    </ThemeProvider>
+  </Grid>
+  <Grid item xs={6} style={{ background: neutral.softBlack1, padding: "5rem" }}>
+    <ThemeProvider theme={dark}>
+      <Example />
+    </ThemeProvider>
+  </Grid>
+</Grid>

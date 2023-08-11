@@ -1,0 +1,62 @@
+import { Button, ThemeProvider, Typography, Grid, Stack } from "@mui/material";
+import { neutral } from "@dcl/watermelon-types/src/colors";
+import * as mui from "@dcl/watermelon-mui/src/theme";
+
+export function TypeExample() {
+  return <>
+      <Typography variant="h2">Button</Typography>
+      <Stack direction="row" spacing={2}>
+        <Button variant="contained">primary</Button>
+        <Button variant="contained" color="secondary">secondary</Button>
+        <Button variant="outlined">outlined</Button>
+        <Button>default</Button>
+      </Stack>
+      </>
+}
+
+export function SizeExample() {
+  return <><Typography variant="h2">Sizes</Typography>
+      <Stack direction="row" spacing={2} alignItems="center">
+        <Button variant="contained" size="large">primary</Button>
+        <Button variant="contained" size="medium">primary</Button>
+        <Button variant="contained" size="small">primary</Button>
+      </Stack>
+      <Stack direction="row" spacing={2} alignItems="center">
+        <Button variant="contained" color="secondary" size="large">secondary</Button>
+        <Button variant="contained" color="secondary" size="medium">secondary</Button>
+        <Button variant="contained" color="secondary" size="small">secondary</Button>
+      </Stack>
+      <Stack direction="row" spacing={2} alignItems="center">
+        <Button variant="outlined" size="large">outlined</Button>
+        <Button variant="outlined" size="medium">outlined</Button>
+        <Button variant="outlined" size="small">outlined</Button>
+      </Stack>
+      <Stack direction="row" spacing={2} alignItems="center">
+        <Button size="large">default</Button>
+        <Button size="medium">default</Button>
+        <Button size="small">default</Button>
+      </Stack></>
+}
+
+<Grid container>
+  <Grid item xs={6} style={{ background: neutral.softWhite, padding: "5rem" }}>
+    <ThemeProvider theme={mui.light}>
+      <TypeExample />
+    </ThemeProvider>
+  </Grid>
+  <Grid item xs={6} style={{ background: neutral.softBlack1, padding: "5rem" }}>
+    <ThemeProvider theme={mui.dark}>
+      <TypeExample />
+    </ThemeProvider>
+  </Grid>
+  <Grid item xs={6} style={{ background: neutral.softWhite, padding: "5rem" }}>
+    <ThemeProvider theme={mui.light}>
+      <SizeExample />
+    </ThemeProvider>
+  </Grid>
+  <Grid item xs={6} style={{ background: neutral.softBlack1, padding: "5rem" }}>
+    <ThemeProvider theme={mui.dark}>
+      <SizeExample />
+    </ThemeProvider>
+  </Grid>
+</Grid>
