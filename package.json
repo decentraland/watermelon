@@ -8,7 +8,8 @@
   ],
   "scripts": {
     "test": "jest",
-    "start": "npm start -w @dcl/watermelon-docs"
+    "start": "npm start -w @dcl/watermelon-docs",
+    "build": "npm run build -w @dcl/watermelon-docs"
   },
   "repository": {
     "type": "git",

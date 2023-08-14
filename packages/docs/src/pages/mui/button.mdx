@@ -39,22 +39,22 @@ export function SizeExample() {
 }
 
 <Grid container>
-  <Grid item xs={6} style={{ background: neutral.softWhite, padding: "5rem" }}>
+  <Grid item xs={6} minHeight="100vh" alignItems="center" justifyContent="center" padding="5rem" backgroundColor={neutral.softWhite}>
     <ThemeProvider theme={mui.light}>
       <TypeExample />
     </ThemeProvider>
   </Grid>
-  <Grid item xs={6} style={{ background: neutral.softBlack1, padding: "5rem" }}>
+  <Grid item xs={6} minHeight="100vh" alignItems="center" justifyContent="center" padding="5rem" backgroundColor={neutral.softBlack1}>
     <ThemeProvider theme={mui.dark}>
       <TypeExample />
     </ThemeProvider>
   </Grid>
-  <Grid item xs={6} style={{ background: neutral.softWhite, padding: "5rem" }}>
+  <Grid item xs={6} minHeight="100vh" alignItems="center" justifyContent="center" padding="5rem" backgroundColor={neutral.softWhite}>
     <ThemeProvider theme={mui.light}>
       <SizeExample />
     </ThemeProvider>
   </Grid>
-  <Grid item xs={6} style={{ background: neutral.softBlack1, padding: "5rem" }}>
+  <Grid item xs={6} minHeight="100vh" alignItems="center" justifyContent="center" padding="5rem" backgroundColor={neutral.softBlack1}>
     <ThemeProvider theme={mui.dark}>
       <SizeExample />
     </ThemeProvider>

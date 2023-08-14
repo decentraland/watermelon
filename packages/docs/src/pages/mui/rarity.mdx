@@ -1,26 +1,22 @@
-
 import { ThemeProvider } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 import Fab from '@mui/material/Fab';
 import ContrastIcon from '@mui/icons-material/Contrast';
-import { neutral, rarityGradient } from "@dcl/watermelon-types/src/colors";
-import CardTitle from "@dcl/watermelon-mui/src/components/Card/CardTitle";
-import CardMarketplaceItem, { nft } from "@dcl/watermelon-mui/src/components/Card/CardMarketplaceItem";
+import { rarity, neutral } from "@dcl/watermelon-types/src/colors";
+import RarityLabel from "@dcl/watermelon-mui/src/components/Rarity/RarityLabel";
 import { dark, light } from "@dcl/watermelon-mui/src/theme";
 
 export function Example() {
-  return <Stack spacing={1} direction="column" alignItems="center">
-    <div>
-      <CardMarketplaceItem />
-    </div>
-    <div>
-      <CardMarketplaceItem nft={nft} owners={23} />
-    </div>
-    <div>
-      <CardMarketplaceItem nft={nft} collectionPrice={500} prices={[2,4,6,8]} />
-    </div>
-  </Stack>
+  return (
+    <Stack spacing={1} direction="column" alignItems="center">
+      {Object.keys(rarity).map((rarity) => (
+        <div key={rarity}>
+          <RarityLabel rarity={rarity} />
+        </div>
+      ))}
+    </Stack>
+  );
 }
 
 export function Presentation() {

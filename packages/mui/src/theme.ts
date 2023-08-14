@@ -2,7 +2,8 @@ import { base, neutral } from '@dcl/watermelon-types/src/colors';
 import { createTheme, ThemeOptions } from '@mui/material/styles';
 
 function theme(type: "light" | "dark"): ThemeOptions {
-  const textColor = type === "light" ? neutral.black : neutral.white;
+  const isDark = type === "dark";
+  const textColor = isDark ? neutral.white : neutral.black;
   return {
     palette: {
       mode: type,
@@ -13,7 +14,8 @@ function theme(type: "light" | "dark"): ThemeOptions {
         main: neutral.white,
       },
       background: {
-        default: neutral.softBlack2,
+        default: isDark ? neutral.softBlack2 : neutral.softWhite,
+        paper: isDark ? neutral.softBlack1 : neutral.white,
       },
       text: {
         primary: base.primary
